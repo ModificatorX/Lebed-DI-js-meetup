@@ -59,12 +59,14 @@ request(url, function(err,res,body)
 					str+="</div>";
 				}
 			}
+			fs.writeFileSync("meet.html",str);
+			str="";
 			starts += DayLong;
 		
 				j++;
 				
 			}
-			fs.writeFileSync("meet.html",str);
+			
 		}	
 		
 	})
